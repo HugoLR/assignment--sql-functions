@@ -35,7 +35,7 @@ SELECT FacilityId, SUM(Slots)
         HAVING SUM(Slots) > 1000;
 
 -- Find the total revenue of each facility
-SELECT
+SELECT Id, SUM(InitialOutlay - MonthlyMaintenance) FROM Facilities GROUP BY Id;
 
 -- Find facilities with a total revenue less than 1000
 
